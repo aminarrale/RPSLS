@@ -1,1 +1,1 @@
-# rpsls
+# Created a game of rock paper scissors lizard spock which incorporated inheritance into the game
