@@ -12,7 +12,7 @@ class Player:
         chosen_gesture = input(f'Select your gesture: {self.gestures[0]}, {self.gestures[1]}, {self.gestures[2]}, {self.gestures[3]}, {self.gestures[4]}')
         if chosen_gesture in self.gestures:
             self.chosen_gesture = chosen_gesture
-            print(f'{self.name} has selected {self.choosen_gesture}')
+            print(f'{self.name} has selected {self.chosen_gesture}')
         else:
             self.choose_gesture()
 

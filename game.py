@@ -1,4 +1,6 @@
 class Game:
+    def __init__(self):
+        
     
     
     def display_greeting(self):
