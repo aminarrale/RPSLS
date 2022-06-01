@@ -1,12 +1,12 @@
 class Player:
-    def __init__(self, name):
-        self.name = name
-     
+    def __init__(self, choose_gesture):
+        self.name = ""
+        self.choose_gesture = choose_gesture
+        self.gestures = ['rock', 'paper', 'scissors', 'lizard', 'spock' ]
+    
 
-    def select_choice(self, choice):
-        self.choice = choice
-        print(f'{self.name} selected {self.choice}')
-        
-    def track_score(self, track_score):
-        self.score = track_score
+    def assign_gesture(self, gesture):
+        self.gesture = gesture
+        print(f'{self.name} selected {self.gesture}')
 
+    
