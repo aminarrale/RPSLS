@@ -52,13 +52,14 @@ class Game:
                 self.player2.get_name()
                 print(f'{self.player1.name} vs {self.player2.name}')
                 break
+    
     def game_round(self):
         while self.player1.score < 2 and self.player2.score < 2:
             print('Round:')
             self.player1.choose_gesture()
             self.player2.choose_gesture()
             if self.player1.chosen_gesture == self.player2.chosen_gesture:
-                print('Tied game')
+                print('Both of you chose the same gesture go again.')
             elif self.player1.chosen_gesture == self.player1.gestures[0] and self.player2.chosen_gesture == self.player2.gestures[2]:
                 print(f'{self.player1.name} wins the round.')
                 self.player1.score += 1
@@ -93,12 +94,13 @@ class Game:
                 print(f'{self.player2.name} wins the round.')
                 self.player2.score += 1
                 
-            print(f'Scoreboard:{self.player1.name}: {self.player1.score}. {self.player2.name}: {self.player2.score}.')
+            print(f'Scoreboard:   {self.player1.name}: {self.player1.score}.   {self.player2.name}: {self.player2.score}.')   
+    
     def show_winner(self):
         if self.player1.score >= 2:
-            print(f'{self.player1.name} has won the game')
+            print(f'{self.player1.name} has won the game!')
         if self.player2.score >=2:
-            print(f'{self.player2.name} has won the game')
+            print(f'{self.player2.name} has won the game!')
 
 
     
