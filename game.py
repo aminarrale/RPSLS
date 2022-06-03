@@ -17,11 +17,13 @@ class Game:
         
     
     
+    #greeting
     def display_greeting(self):
         print('Welcome to Rock Paper Scissors Lizard Spock.')
         print('each match will be the best of three games')
 
-
+    
+    #rules of the game
     def game_rules(self):
         print('Here are the rules to the game:')
         print('Rock crushes Scissors')
@@ -33,7 +35,8 @@ class Game:
         print('Lizard eats Paper')
         print('Paper disproves Spock')
         print('Spock vaporizes spock')
-
+    
+    #choose player vs player or player vs ai
     def choose_game_type(self):
         while True:
             try:
@@ -53,6 +56,7 @@ class Game:
                 print(f'{self.player1.name} vs {self.player2.name}')
                 break
     
+    #best 2 out of 3 wins
     def game_round(self):
         while self.player1.score < 2 and self.player2.score < 2:
             print('Round:')
@@ -93,9 +97,10 @@ class Game:
             else:
                 print(f'{self.player2.name} wins the round.')
                 self.player2.score += 1
-                
+              #scoreboard  
             print(f'Scoreboard:   {self.player1.name}: {self.player1.score}.   {self.player2.name}: {self.player2.score}.')   
     
+    # displays winner
     def show_winner(self):
         if self.player1.score >= 2:
             print(f'{self.player1.name} has won the game!')
