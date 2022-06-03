@@ -12,6 +12,7 @@ class Game:
         self.game_rules()
         self.choose_game_type()
         self.game_round()
+        self.show_winner()
 
         
     
@@ -93,6 +94,12 @@ class Game:
                 self.player2.score += 1
                 
             print(f'Scoreboard:{self.player1.name}: {self.player1.score}. {self.player2.name}: {self.player2.score}.')
+    def show_winner(self):
+        if self.player1.score >= 2:
+            print(f'{self.player1.name} has won the game')
+        if self.player2.score >=2:
+            print(f'{self.player2.name} has won the game')
+
 
     
 
