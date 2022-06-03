@@ -6,7 +6,7 @@ class Player:
         self.score = 0
     
     def get_name(self):
-        self.name = input('Enter name')
+        self.name = input('Enter name:')
     
     def choose_gesture(self):
         chosen_gesture = input(f'Select your gesture: {self.gestures[0]}, {self.gestures[1]}, {self.gestures[2]}, {self.gestures[3]}, {self.gestures[4]}')
